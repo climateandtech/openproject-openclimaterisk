@@ -17,12 +17,13 @@ Gem::Specification.new do |s|
   DESC
   s.license     = "GPL-3.0-or-later"
   s.metadata    = {
-    "source_code_uri" => "https://github.com/climateandtech/openproject-open_climate_risk",
-    "bug_tracker_uri" => "https://github.com/climateandtech/openproject-open_climate_risk/issues"
+    "source_code_uri" => "https://github.com/climateandtech/openproject-openclimaterisk",
+    "bug_tracker_uri" => "https://github.com/climateandtech/openproject-openclimaterisk/issues"
   }
 
   s.files = Dir[
     "{lib,config,doc,frontend,app}/**/*",
+    "LICENSE",
     "package.json",
     "*.md",
     "lib/tasks/**/*.rake"

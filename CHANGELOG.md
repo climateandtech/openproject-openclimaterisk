@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5
+
+- SPDX `GPL-3.0-or-later`: root [LICENSE](LICENSE), README license section, gemspec `LICENSE` in package files.
+
 ## 0.4.2
 
 - Co-brand header: canonical `brand/logo.png` as OCR mark, × separator, stock OpenProject logo (no replacement).
