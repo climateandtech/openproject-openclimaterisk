@@ -1,0 +1,8 @@
+en:
+  js:
+    open_climate_risk:
+      platform_title: "Climate Management Platform"
+      module_title: "Open Climate Risk"
+      homescreen_tagline: "Physical climate risk and ESRS workflows on %{platform}."
+      glue_workbench_url: ""
+      four_eye_hint: "Four-eye review is required for %{module} work packages."

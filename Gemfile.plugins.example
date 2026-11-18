@@ -1,0 +1,5 @@
+# Copy into your OpenProject core as Gemfile.plugins (merge with existing :opf_plugins group).
+
+group :opf_plugins do
+  gem "openproject-open_climate_risk", path: "../open-climate-risk/openproject-plugin"
+end

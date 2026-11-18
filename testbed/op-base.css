@@ -1,0 +1,108 @@
+/* Minimal OpenProject chrome so plugin overrides are visible locally. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.op-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 1rem;
+  min-height: 55px;
+  /* Default OP blue bar — plugin.css should replace with light OCR header */
+  background: #1a67b2;
+  border-bottom: 1px solid #145a9e;
+}
+
+.op-app-header .op-app-menu a {
+  color: #fff;
+}
+
+.op-app-header--center {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+}
+
+.op-logo {
+  width: 230px;
+  height: 40px;
+}
+
+.op-logo--link {
+  margin-top: 12px;
+  width: 100%;
+  display: block;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.op-app-menu {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.op-app-menu a {
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+#wrapper.can-hide-navigation.nosidebar #content {
+  padding: 1rem;
+}
+
+#login-form.form.-bordered {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+form.user-login--form.-wide-labels .form--field {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+form.user-login--form .form--label {
+  text-align: right;
+}
+
+.form--text-field {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+}
+
+.button.-primary {
+  padding: 0.45rem 1rem;
+  border: 1px solid #2a468f;
+  background: #3457b5;
+  color: #fff;
+  cursor: pointer;
+}
+
+.breadcrumbs {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.hidden-for-sighted {
+  position: absolute;
+  left: -10000px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sign in | Climate Management Platform — plugin testbed</title>
+  <link rel="stylesheet" href="op-base.css" />
+  <link rel="stylesheet" href="plugin.css" />
+  <style type="text/css">
+    .op-logo--link {
+      background-image: url("assets/openproject-logo-white.png");
+    }
+    .op-logo--link_high_contrast {
+      background-image: url("assets/openproject-logo.png");
+    }
+  </style>
+</head>
+<body class="theme-core_design controller-account action-login env-production">
+  <div id="wrapper" class="can-hide-navigation nosidebar">
+    <header class="op-app-header">
+      <div class="op-app-header--start"><span class="hidden-for-sighted">Top</span></div>
+      <div class="op-app-header--center">
+        <div class="op-logo">
+          <a class="op-logo--link" href="/">Home</a>
+        </div>
+      </div>
+      <div class="op-app-header--end">
+        <ul class="op-app-menu">
+          <li class="op-app-menu--item hidden-for-mobile"><a href="#">Search</a></li>
+          <li class="op-app-menu--item hidden-for-mobile"><a href="#">Help</a></li>
+          <li class="op-app-menu--item"><a href="#">Sign in</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <nav class="breadcrumbs" aria-label="Breadcrumb">Sign in</nav>
+
+    <div id="content" class="can-hide-navigation nosidebar">
+      <div id="login-form" class="form -bordered">
+        <h1>Sign in</h1>
+        <hr class="form--separator" />
+        <form class="-wide-labels user-login--form form" action="/login" method="post">
+          <div class="form--field -required">
+            <label class="form--label" for="username">Username</label>
+            <div class="form--field-container">
+              <input class="form--text-field" id="username" name="username" type="text" />
+            </div>
+          </div>
+          <div class="form--field -required">
+            <label class="form--label" for="password">Password</label>
+            <div class="form--field-container">
+              <input class="form--text-field -password" id="password" name="password" type="password" />
+            </div>
+          </div>
+          <div class="login-form--footer">
+            <input type="submit" name="login" value="Sign in" class="button -primary" />
+            <a href="#">Forgot your password?</a>
+            <a href="#">Create a new account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:#4a5a6a;font-size:0.8rem;margin:2rem 1rem;">
+    Plugin testbed — <a href="index.html">all views</a>
+  </p>
+  <script src="plugin.js"></script>
+</body>
+</html>

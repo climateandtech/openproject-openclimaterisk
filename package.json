@@ -1,0 +1,7 @@
+{
+  "name": "openproject-open_climate_risk",
+  "version": "0.3.0",
+  "description": "Climate Management Platform — Community branding and glue integration for OpenProject",
+  "private": true,
+  "dependencies": {}
+}

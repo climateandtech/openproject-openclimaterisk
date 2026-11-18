@@ -1,0 +1,233 @@
+// openclimaterisk.com tokens on OpenProject — light header, OCR wordmark with OpenProject.
+
+:root {
+  --ocr-bg: #f7f9fb;
+  --ocr-navy: #001830;
+  --ocr-teal: #007080;
+  --ocr-muted: #4a5a6a;
+  --ocr-border: rgba(0, 24, 48, 0.12);
+  --ocr-card: #ffffff;
+  --ocr-radius: 0.875rem;
+  --ocr-radius-sm: 0.625rem;
+  --ocr-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  --primary-button-color: var(--ocr-navy);
+  --primary-button-color--major1: #00122a;
+  --primary-button-color--minor1: #e8f4f1;
+  --primary-button-color--minor2: #cce8e0;
+  --primary-button-color--dark-mode: #002a4d;
+
+  --accent-color: var(--ocr-teal);
+  --accent-color--major1: #005a66;
+  --accent-color--major2: #004550;
+  --accent-color--minor1: #d9f0f0;
+  --accent-color--minor2: #b3e0e0;
+  --accent-color--dark-mode: #3399a6;
+
+  --header-bg-color: var(--ocr-card);
+  --header-border-bottom-color: var(--ocr-border);
+  --header-item-font-color: var(--ocr-navy);
+  --header-item-font-hover-color: var(--ocr-teal);
+
+  --main-menu-bg-selected-background: var(--ocr-teal);
+  --content-icon-color: var(--ocr-teal);
+
+  --borderRadius-medium: var(--ocr-radius-sm);
+}
+
+body {
+  background: var(--ocr-bg);
+  color: var(--ocr-navy);
+  font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+}
+
+#content,
+#main {
+  color: var(--ocr-navy);
+}
+
+#content-header {
+  margin-bottom: 1rem;
+}
+
+.op-app-header {
+  background: var(--ocr-card) !important;
+  border-bottom: 1px solid var(--ocr-border);
+}
+
+.op-app-header .op-logo {
+  width: auto !important;
+  height: auto !important;
+}
+
+// Site wordmark: brand/logo-wordmark.png (963×191 — same as openclimaterisk.com).
+.op-logo.ocr-cobrand-ready {
+  display: flex !important;
+  align-items: center;
+  gap: 0.65rem;
+  width: auto !important;
+  max-width: none;
+  height: auto;
+  margin-top: 0.25rem;
+  background: transparent;
+  padding: 0;
+}
+
+a.ocr-cobrand-mark {
+  display: block;
+  flex: 0 0 auto;
+  width: min(220px, 44vw);
+  height: 40px;
+  background: url("/assets/open_climate_risk/logo-wordmark.png") left center / contain no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.ocr-cobrand-with {
+  flex: 0 0 auto;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ocr-muted);
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.op-app-header .op-logo.ocr-cobrand-ready .op-logo--link {
+  position: static;
+  flex: 0 0 auto;
+  width: 130px !important;
+  height: 28px !important;
+  margin-top: 0 !important;
+  min-width: 80px;
+  /* background-image: set by OpenProject per theme (do not override). */
+}
+
+.form.-bordered,
+#login-form,
+.widget-box,
+.op-breadcrumb-box {
+  background: var(--ocr-card);
+  border: 1px solid var(--ocr-border);
+  border-radius: var(--ocr-radius);
+  box-shadow: var(--ocr-shadow-sm);
+}
+
+body.controller-account.action-login,
+body.controller-account.action-lost_password {
+  background: var(--ocr-bg);
+}
+
+body.controller-account.action-login #content,
+body.controller-account.action-lost_password #content {
+  max-width: 26rem;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+}
+
+#login-form,
+body.controller-account.action-login #content .form.-bordered {
+  padding: 1.75rem 1.5rem;
+}
+
+#login-form > h1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ocr-navy);
+  margin-bottom: 1.25rem;
+}
+
+#login-form .form--field,
+body.controller-account.action-login .user-login--form .form--field,
+form.user-login--form .form--field {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+#login-form .form--label,
+body.controller-account.action-login .user-login--form .form--label {
+  text-align: left;
+  margin-bottom: 0.35rem;
+  color: var(--ocr-navy);
+  font-weight: 500;
+}
+
+.button,
+input[type="submit"].button {
+  border-radius: var(--ocr-radius-sm);
+  font-weight: 600;
+}
+
+body.controller-account.action-login #login-form input.button.-primary,
+body.controller-account.action-login #login-form input[type="submit"].button.-primary {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.button.-primary,
+input[type="submit"].button.-primary {
+  border-radius: var(--ocr-radius-sm);
+  background-color: var(--ocr-navy) !important;
+  border-color: var(--ocr-navy) !important;
+  color: #fff !important;
+}
+
+body.controller-account.action-login a,
+body.controller-account.action-lost_password a {
+  color: var(--ocr-teal);
+}
+
+.button.-primary:hover,
+input[type="submit"].button.-primary:hover {
+  opacity: 0.92;
+}
+
+.button:focus-visible,
+.form--text-field:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ocr-teal);
+  outline-offset: 2px;
+}
+
+.form--text-field,
+.form--select,
+textarea.form--text-area,
+.form--field input[type="text"],
+.form--field input[type="password"],
+.form--field input[type="email"] {
+  border-radius: var(--ocr-radius-sm);
+  border-color: var(--ocr-border);
+  background: var(--ocr-card);
+}
+
+.form--field.-required .form--label::after {
+  color: var(--ocr-muted);
+}
+
+#main-menu {
+  border-right: 1px solid var(--ocr-border);
+  background: var(--ocr-card);
+}
+
+.main-menu-item.-selected a {
+  border-radius: var(--ocr-radius-sm);
+}
+
+.op-table--container,
+table.list {
+  border: 1px solid var(--ocr-border);
+  border-radius: var(--ocr-radius-sm);
+  overflow: hidden;
+  background: var(--ocr-card);
+}
+
+.op-modal,
+.op-modal--body {
+  border-radius: var(--ocr-radius);
+}
+
+.op-tab-bar--item {
+  border-radius: var(--ocr-radius-sm) var(--ocr-radius-sm) 0 0;
+}

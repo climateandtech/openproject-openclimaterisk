@@ -1,0 +1,13 @@
+en:
+  open_project:
+    open_climate_risk:
+      platform_title: "Climate Management Platform"
+      module_title: "Open Climate Risk"
+      errors:
+        four_eye_same_reviewer: >-
+          Four-eye review (%{module_title} on %{platform_title}): another user must close
+          this work package after In review. The reviewer cannot be the same person who sent
+          it for review.
+  project:
+    open_climate_risk:
+      menu: "Open Climate Risk"
