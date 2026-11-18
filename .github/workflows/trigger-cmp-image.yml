@@ -1,0 +1,29 @@
+# CMP Docker image is built on climateandtech/openclimaterisk (not this repo).
+# After each plugin push, dispatch that workflow so GHCR :13 updates without a no-op app commit.
+name: Trigger openclimaterisk CMP image
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository_dispatch → openclimaterisk
+        env:
+          PAT: ${{ secrets.OCR_OPENCLIMATERISK_DISPATCH_PAT }}
+        run: |
+          set -euo pipefail
+          if [ -z "${PAT:-}" ]; then
+            echo "::warning::Set repo secret OCR_OPENCLIMATERISK_DISPATCH_PAT (classic PAT: repo on openclimaterisk)"
+            echo "Or run workflow_dispatch on openclimaterisk: OpenProject CMP image"
+            exit 0
+          fi
+          curl -fsS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${PAT}" \
+            https://api.github.com/repos/climateandtech/openclimaterisk/dispatches \
+            -d '{"event_type":"plugin-updated","client_payload":{"sha":"'"${GITHUB_SHA}"'","ref":"'"${GITHUB_REF}"'"}}'
+          echo "Dispatched plugin-updated for ${GITHUB_SHA}"
