@@ -53,6 +53,47 @@ body {
 .op-app-header {
   background: var(--ocr-card) !important;
   border-bottom: 1px solid var(--ocr-border);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.op-app-header--start {
+  flex: 0 0 auto;
+  z-index: 2;
+}
+
+.op-app-header--center {
+  flex: 0 1 auto;
+  min-width: 0;
+  z-index: 1;
+  margin-inline-start: 0.25rem;
+}
+
+.op-app-header--end {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+// Logged-in: compact cobrand so global Create does not overlap the wordmark.
+body:not(.controller-account) .op-logo.ocr-cobrand-ready {
+  gap: 0.4rem;
+  max-width: min(320px, 52vw);
+}
+
+body:not(.controller-account) a.ocr-cobrand-mark {
+  width: min(132px, 24vw);
+  height: 30px;
+}
+
+body:not(.controller-account) .ocr-cobrand-with {
+  font-size: 0.6875rem;
+}
+
+body:not(.controller-account) .op-app-header .op-logo.ocr-cobrand-ready .op-logo--link {
+  width: 96px !important;
+  height: 22px !important;
 }
 
 .op-app-header .op-logo {
